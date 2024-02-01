@@ -72,6 +72,10 @@ function App() {
         component={Muestras}
       />
       <Route
+        path='/fundacion/muestras/:year'
+        component={Muestras}
+      />
+      <Route
         path='/fundacion/nosotros'
         component={Nosotros}
       />

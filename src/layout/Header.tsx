@@ -6,7 +6,7 @@ import Bars from './Bars'
 
 const Header = () => {
   return (
-    <header className='sticky w-full top-0 p-6 lg:p-12 z-50 bg-white/60 backdrop-blur-sm flex flex-col gap-y-6'>
+    <header className='sticky w-full top-0 p-6 lg:p-12 z-50 bg-white/80 backdrop-blur-sm flex flex-col gap-y-6'>
       <div className='flex justify-between items-center animate-duration-1000'>
         <div>
           <Link to='/'>

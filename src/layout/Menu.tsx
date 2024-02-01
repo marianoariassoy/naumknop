@@ -20,6 +20,17 @@ const Menu = () => {
                     <Link to={item.url}>
                       <a className={`transition-colors ${location === item.url ? 'text-primary' : 'text-primary-hover'}`}>{item.title}</a>
                     </Link>
+                    {item.filters &&
+                      location.split('/')[1] === item.url.split('/')[1] &&
+                      location.split('/')[2] === item.url.split('/')[2] &&
+                      item.filters.map((filter, index) => (
+                        <Link
+                          key={index}
+                          to={filter.url}
+                        >
+                          <a className={`transition-colors ml-1 ${location === filter.url ? 'text-black' : 'text-primary-hover'}`}>— {filter.title}</a>
+                        </Link>
+                      ))}
                   </li>
                 ))}
               </ul>
@@ -32,6 +43,17 @@ const Menu = () => {
                     <Link to={item.url}>
                       <a className={`transition-colors ${location === item.url ? 'text-primary' : 'text-primary-hover'}`}>{item.title}</a>
                     </Link>
+                    {item.filters &&
+                      location.split('/')[1] === item.url.split('/')[1] &&
+                      location.split('/')[2] === item.url.split('/')[2] &&
+                      item.filters.map((filter, index) => (
+                        <Link
+                          key={index}
+                          to={filter.url}
+                        >
+                          <a className={`transition-colors ml-1 ${location === filter.url ? 'text-black' : 'text-primary-hover'}`}>— {filter.title}</a>
+                        </Link>
+                      ))}
                   </li>
                 ))}
               </ul>

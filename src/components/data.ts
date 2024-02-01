@@ -1,3 +1,5 @@
+import { Instagram, Facebook } from './icons'
+
 export const menu = [
   {
     title: 'Naum Knop',
@@ -55,15 +57,15 @@ export const menu = [
         filters: [
           {
             title: '2023',
-            url: '/fundacion/fundacion/2023'
+            url: '/fundacion/muestras/2023'
           },
           {
             title: '2022',
-            url: '/fundacion/fundacion/2022'
+            url: '/fundacion/muestras/2022'
           },
           {
             title: '2019',
-            url: '/fundacion/fundacion/2019'
+            url: '/fundacion/muestras/2019'
           }
         ]
       },
@@ -84,5 +86,20 @@ export const menu = [
   {
     title: 'Contacto',
     url: '/contacto'
+  }
+]
+
+export const social = [
+  {
+    title: 'Knopfundacion',
+    name: 'Facebook',
+    url: 'https://www.facebook.com/Knopfundacion',
+    icon: Facebook
+  },
+  {
+    title: '@knopfundacion',
+    name: 'Instagram',
+    url: 'https://www.instagram.com/knopfundacion',
+    icon: Instagram
   }
 ]

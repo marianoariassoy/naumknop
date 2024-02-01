@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useLocation } from 'wouter'
 import Layout from '../../layout/Layout'
-import ImageComponent from '../../components/Image'
+import ObrasItem from './ObrasItem'
 
 const Index = () => {
   const [location] = useLocation()
@@ -82,20 +82,12 @@ const Index = () => {
   return (
     <Layout>
       <section className='bg-secondary h-full'>
-        <div className='animate-fade animate-duration-500 m-auto max-w-4xl px-6 py-12 flex flex-col gap-y-6'>
+        <div className='animate-fade animate-duration-500 m-auto max-w-4xl px-6 py-20 flex flex-col gap-y-6'>
           {dataFiltered.map((item, index) => (
-            <article
-              className='flex flex-col gap-y-3'
+            <ObrasItem
               key={index}
-            >
-              <div>
-                <ImageComponent
-                  src={item.image}
-                  alt={item.title}
-                />
-              </div>
-              <div className='text-sm text-gray'>{item.title}</div>
-            </article>
+              data={item}
+            />
           ))}
         </div>
       </section>

@@ -36,7 +36,7 @@ const index = () => {
   return (
     <Layout>
       <section className='bg-secondary h-full font-secondary'>
-        <div className='animate-fade animate-duration-300 m-auto max-w-6xl px-6 py-12 flex flex-col gap-y-6'>
+        <div className='animate-fade animate-duration-300 m-auto max-w-6xl px-6 py-20 flex flex-col gap-y-6'>
           <div className='flex gap-x-6 lg:gap-x-12'>
             <div className='w-[15%] lg:w-1/3'></div>
             <div className='w-[85%] lg:w-2/3'>

@@ -40,7 +40,7 @@ const index = () => {
   return (
     <Layout>
       <section className='bg-secondary h-full font-secondary'>
-        <div className='animate-fade animate-duration-300 m-auto max-w-6xl px-6 py-12'>
+        <div className='animate-fade animate-duration-300 m-auto max-w-6xl px-6 py-20'>
           <div className='flex flex-col gap-y-2'>
             {data.map((item, index) => (
               <ExposicionesItem

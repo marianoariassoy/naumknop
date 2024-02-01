@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;900&family=Montserrat:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700;900&family=Montserrat:wght@300;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -13,6 +13,7 @@
 }
 body {
   color: #1d1d1b;
+  accent-color: var(--color-primary);
 }
 .font-secondary {
   font-family: 'Alegreya', serif;
@@ -28,6 +29,9 @@ body {
 }
 .bg-white {
   background-color: #f6f6f6;
+}
+.bg-primary {
+  background-color: var(--color-primary);
 }
 .bg-secondary {
   background-color: var(--color-secondary);
@@ -45,6 +49,8 @@ body {
   color: white;
   position: fixed;
   background-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 .text-primary-hover:hover {
   color: var(--color-primary);

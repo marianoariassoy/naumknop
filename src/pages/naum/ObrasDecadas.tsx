@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
-import { Link, useParams } from 'wouter'
+import { useParams } from 'wouter'
 import Layout from '../../layout/Layout'
-import ImageComponent from '../../components/Image'
+import ObrasDestacadasItem from './ObrasDestacadasItem'
+import ObrasItem from './ObrasItem'
 
 const Index = () => {
   const [filter, setFilter] = useState({
@@ -102,24 +103,16 @@ const Index = () => {
           <div className='animate-fade animate-duration-300 m-auto max-w-6xl px-6 py-12 flex items-center justify-center h-full'>
             <div className='w-full grid lg:grid-cols-3 gap-6'>
               {decadas.map((item, index) => (
-                <article
+                <ObrasDestacadasItem
                   key={index}
-                  className='flex flex-col gap-y-3'
-                >
-                  <Link to={`/naum/obras/decadas/${item.title}`}>
-                    <div
-                      className='bg-[#00a19a] bg-blend-multiply hover:bg-blend-normal aspect-[6/5] transition-all cursor-pointer bg-no-repeat bg-cover'
-                      style={{ backgroundImage: `url(${item.image})` }}
-                    ></div>
-                  </Link>
-                  <div>{item.title}</div>
-                </article>
+                  data={item}
+                />
               ))}
             </div>
           </div>
         )}
         {filter.from > 0 && (
-          <div className='animate-fade animate-duration-300 m-auto max-w-4xl px-6 py-12 '>
+          <div className='animate-fade animate-duration-300 m-auto max-w-4xl px-6 py-20'>
             <h1 className='text-3xl mb-6 font-secondary font-black'>
               {filter.from}
               {' - '}
@@ -127,20 +120,10 @@ const Index = () => {
             </h1>
             <div className='flex flex-col gap-y-6'>
               {dataFiltered.map((item, index) => (
-                <article
-                  className='flex flex-col gap-y-3'
+                <ObrasItem
                   key={index}
-                >
-                  <div>
-                    <ImageComponent
-                      src={item.image}
-                      alt={item.title}
-                    />
-                  </div>
-                  <div className='text-sm text-gray'>
-                    {item.title} - {item.year}
-                  </div>
-                </article>
+                  data={item}
+                />
               ))}
             </div>
           </div>
