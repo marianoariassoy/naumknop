@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;900&family=Montserrat:wght@300;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #00a19a;
+  --color-secondary: #f4f1e8;
+  --color-gray: #878787;
+  --color-gray-2: #bbb9b3;
+  --font-size: 16px;
+}
+body {
+  color: #1d1d1b;
+}
+.font-secondary {
+  font-family: 'Alegreya', serif;
+}
+.text-primary {
+  color: var(--color-primary);
+}
+.text-white {
+  color: #f6f6f6;
+}
+.text-gray {
+  color: var(--color-gray);
+}
+.bg-white {
+  background-color: #f6f6f6;
+}
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+.bg-gray-2 {
+  background-color: var(--color-gray-2);
+}
+
+#root {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+.hero-mode {
+  color: white;
+  position: fixed;
+  background-color: transparent;
+}
+.text-primary-hover:hover {
+  color: var(--color-primary);
+}
+.indicators {
+  position: absolute;
+  width: 100%;
+  bottom: 3rem;
+}
+.indicators li {
+  margin: 0 0.3rem !important;
+}
