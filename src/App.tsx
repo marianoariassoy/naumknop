@@ -1,22 +1,20 @@
 import { Route, Switch } from 'wouter'
 import Hero from './pages/hero'
 import Biografia from './pages/naum/Biografia'
-import Obras from './pages/naum/Obras'
-import ObrasDecadas from './pages/naum/ObrasDecadas'
+import Obras from './pages/naum/ObrasContainer'
+import ObrasDecadas from './pages/naum/ObrasDecadasContainer'
 import Exposiciones from './pages/naum/Exposiciones'
 import Premios from './pages/naum/Premios'
 import Bibliografia from './pages/naum/Bibliografia'
 
 import Historia from './pages/fundacion/Historia'
-import Muestras from './pages/fundacion/Muestras'
+import Muestras from './pages/fundacion/MuestrasContainer'
 import Nosotros from './pages/fundacion/Nosotros'
 
 import Prensa from './pages/prensa'
 import Eventos from './pages/eventos'
 import Contacto from './pages/contacto'
 import Error from './pages/error'
-
-// import Error from './pages/error'
 
 function App() {
   return (

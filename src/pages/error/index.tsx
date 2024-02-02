@@ -1,11 +1,19 @@
+import { useEffect } from 'react'
 import Layout from '../../layout/Layout'
 
-const index = () => {
+const Index = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    document.title = 'NAUM KNOP'
+  }, [])
+
   return (
     <Layout>
-      <section className='fade-in'>section</section>
+      <section className='h-full w-full px-6 flex items-center justify-center bg-secondary'>
+        <div className='text-2xl'>Página no encontada</div>
+      </section>
     </Layout>
   )
 }
 
-export default index
+export default Index

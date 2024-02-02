@@ -1,6 +1,17 @@
+import { useEffect } from 'react'
 import Layout from '../../layout/Layout'
+import useFetch from '../../hooks/useFetch'
+import Loader from '../../components/Loader'
+import HTMLText from '../../hooks/useHTML'
 
-const index = () => {
+const Index = () => {
+  const { data, loading } = useFetch(`/textos`)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    document.title = 'NAUM KNOP Nosotros'
+  }, [])
+
   return (
     <Layout>
       <section className='bg-secondary h-full'>
@@ -8,15 +19,9 @@ const index = () => {
           <div className='lg:w-1/3'></div>
           <div className='lg:w-2/3 font-secondary flex flex-col gap-y-3'>
             <h1 className='font-black text-xl'>Consejo de Administración</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nostrum non maxime veritatis commodi ipsam ipsa alias quae, vel impedit ratione mollitia excepturi ex
-              sapiente est at officia deleniti reprehenderit.
-            </p>
+            {loading ? <Loader /> : <HTMLText text={data[3].text} />}
             <h1 className='font-black text-xl'>Staff</h1>
-            <p>
-              Pablo Knop <br />
-              Florencia Belén Martínez
-            </p>
+            {loading ? <Loader /> : <HTMLText text={data[4].text} />}
           </div>
         </div>
       </section>
@@ -24,4 +29,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

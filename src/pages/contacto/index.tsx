@@ -1,8 +1,14 @@
+import { useEffect } from 'react'
 import Layout from '../../layout/Layout'
 import Social from './Social'
 import Form from './Form'
 
-const index = () => {
+const Index = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    document.title = 'NAUM KNOP Contacto'
+  }, [])
+
   return (
     <Layout>
       <section className='bg-secondary h-full'>
@@ -34,4 +40,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index
