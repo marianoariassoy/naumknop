@@ -2,12 +2,14 @@ import Layout from '../../layout/Layout'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import HTMLText from '../../hooks/useHTML'
-
+import Volver from '../../components/Volver'
 const Index = () => {
   const { data, loading } = useFetch(`/textos`)
 
   return (
     <Layout>
+      <Volver url='/naum/premios' />
+
       <section className='bg-secondary h-full font-secondary'>
         {loading ? (
           <Loader />

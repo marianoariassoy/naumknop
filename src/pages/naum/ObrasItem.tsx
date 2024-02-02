@@ -3,7 +3,7 @@ import ImageComponent from '../../components/Image'
 const ObrasItem = ({ data }) => {
   return (
     <article className='flex flex-col gap-y-3'>
-      <div>
+      <div className='min-h-[300px]'>
         <ImageComponent
           src={data.image}
           alt={data.title}

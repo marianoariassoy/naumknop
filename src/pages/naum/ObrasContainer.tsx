@@ -3,6 +3,7 @@ import Layout from '../../layout/Layout'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import Obras from './Obras'
+import Volver from '../../components/Volver'
 
 const Index = () => {
   const { data, loading } = useFetch(`/obras`)
@@ -14,6 +15,8 @@ const Index = () => {
 
   return (
     <Layout>
+      <Volver url='/naum/biografia' />
+
       {loading ? (
         <div className='bg-secondary h-full'>
           <Loader />

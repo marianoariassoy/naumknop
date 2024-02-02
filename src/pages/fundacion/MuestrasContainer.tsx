@@ -4,6 +4,7 @@ import Layout from '../../layout/Layout'
 import MuestrasTexto from './MuestrasTexto'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
+import Volver from '../../components/Volver'
 import Muestras from './Muestras'
 
 const Index = () => {
@@ -27,6 +28,8 @@ const Index = () => {
 
   return (
     <Layout>
+      <Volver url='/fundacion/historia' />
+
       <section className='bg-secondary h-full'>
         <div className='animate-fade animate-duration-300 m-auto max-w-6xl px-6 py-20 grid lg:grid-cols-3 gap-3 font-secondary'>
           <MuestrasTexto />

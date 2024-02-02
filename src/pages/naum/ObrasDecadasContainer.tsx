@@ -5,6 +5,7 @@ import ObrasDecadas from './ObrasDecadas'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import Decadas from './Decadas'
+import Volver from '../../components/Volver'
 
 const Index = () => {
   const { data, loading } = useFetch(`/obras`)
@@ -28,6 +29,8 @@ const Index = () => {
 
   return (
     <Layout>
+      <Volver url='/naum/biografia' />
+
       <section className='bg-secondary h-full'>
         {filter.from === 0 && <Decadas />}
         {filter.from > 0 &&

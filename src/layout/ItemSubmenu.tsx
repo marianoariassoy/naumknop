@@ -4,7 +4,7 @@ const ItemSubmenu = ({ item, location }) => {
   const matchUrl = location.split('/')[1] === item.url.split('/')[1] && location.split('/')[2] === item.url.split('/')[2] && true
 
   return (
-    <li className='border-r px-3'>
+    <li className='border-r px-2'>
       <Link to={item.url}>
         <a className={`transition-colors ${matchUrl ? 'text-primary' : 'text-primary-hover'}`}>{item.title}</a>
       </Link>

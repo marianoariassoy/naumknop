@@ -4,6 +4,7 @@ import useFetch from '../../hooks/useFetch'
 import HTMLText from '../../hooks/useHTML'
 import BeatLoader from 'react-spinners/BeatLoader'
 import BiografiaImages from './BiografiaImages'
+
 const Index = () => {
   const { data, loading } = useFetch(`/textos`)
 

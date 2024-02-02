@@ -11,7 +11,7 @@ const Nav = () => {
         {menu.map((item, index) => (
           <li
             key={index}
-            className='border-r px-3'
+            className='border-r px-4'
           >
             <Link to={item.url}>
               <a className={`transition-colors ${location.split('/')[1] === item.url.split('/')[1] ? 'text-primary' : 'hover:text-gray-500'}`}>{item.title}</a>
@@ -19,7 +19,7 @@ const Nav = () => {
           </li>
         ))}
       </ul>
-      <ul className='absolute flex [&>li:last-child]:border-0 [&>li:last-child]:p-0] text-gray font-secondary text-sm'>
+      <ul className='absolute flex [&>li:last-child]:border-0 [&>li:last-child]:p-0] text-gray font-secondary pl-2'>
         {location.split('/')[1] === 'naum' &&
           menu[0].submenu.map((item, index) => (
             <ItemSubmenu

@@ -2,12 +2,14 @@ import Layout from '../../layout/Layout'
 import ExposicionesItem from './ExposicionesItem'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
-
+import Volver from '../../components/Volver'
 const Index = () => {
   const { data, loading } = useFetch(`/premios`)
 
   return (
     <Layout>
+      <Volver url='/naum/exposiciones' />
+
       <section className='bg-secondary h-full font-secondary'>
         {loading ? (
           <Loader />

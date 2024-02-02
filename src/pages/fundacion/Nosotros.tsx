@@ -3,6 +3,7 @@ import Layout from '../../layout/Layout'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import HTMLText from '../../hooks/useHTML'
+import Volver from '../../components/Volver'
 
 const Index = () => {
   const { data, loading } = useFetch(`/textos`)
@@ -14,6 +15,8 @@ const Index = () => {
 
   return (
     <Layout>
+      <Volver url='/fundacion/muestras' />
+
       <section className='bg-secondary h-full'>
         <div className='animate-fade animate-duration-300 m-auto max-w-6xl px-6 py-20 flex flex-col-reverse lg:flex-row gap-y-6 gap-x-12'>
           <div className='lg:w-1/3'></div>
