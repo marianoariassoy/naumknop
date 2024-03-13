@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
-// const apiUrl = 'http://localhost/sites/knop-backend/api'
-const apiUrl = 'https://marianoarias.soy/sites/knop-backend/api'
+const apiUrl = 'http://naum-knop.org/backend/api'
 import axios from 'axios'
 
 function useFetch(url: string) {

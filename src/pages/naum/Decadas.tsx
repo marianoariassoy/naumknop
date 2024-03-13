@@ -3,16 +3,16 @@ import ObrasDestacadasItem from './ObrasDestacadasItem'
 const Decadas = () => {
   const decadas = [
     {
-      title: '1930-1940',
-      image: 'https://marianoarias.soy/sites/knop-backend/images-static/decadas19301940.jpg'
-    },
-    {
       title: '1940-1960',
-      image: 'https://marianoarias.soy/sites/knop-backend/images-static/decadas19401960.jpg'
+      image: 'http://naum-knop.org/backend/images-static/decadas19301940.jpg'
     },
     {
-      title: '1960-1970',
-      image: 'https://marianoarias.soy/sites/knop-backend/images-static/decadas19601970.jpg'
+      title: '1960-1980',
+      image: 'http://naum-knop.org/backend/images-static/decadas19401960.jpg'
+    },
+    {
+      title: '1980-1990',
+      image: 'http://naum-knop.org/backend/images-static/decadas19601970.jpg'
     }
   ]
 

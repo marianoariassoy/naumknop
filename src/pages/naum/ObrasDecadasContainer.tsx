@@ -29,7 +29,7 @@ const Index = () => {
 
   return (
     <Layout>
-      <Volver url='/naum/biografia' />
+      <Volver url='/naum/obras/decadas' />
 
       <section className='bg-secondary h-full'>
         {filter.from === 0 && <Decadas />}

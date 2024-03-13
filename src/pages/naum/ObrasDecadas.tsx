@@ -9,12 +9,15 @@ const ObrasDecadas = ({ data, filter }) => {
         {filter.to}
       </h1>
       <div className='flex flex-col gap-y-6'>
-        {data.map((item, index) => (
-          <ObrasItem
-            key={index}
-            data={item}
-          />
-        ))}
+        {data
+          .filter(item => item.year >= filter.from && item.year <= filter.to)
+          .map((item, index) => (
+            <ObrasItem
+              key={index}
+              data={item}
+              setCurrentImage={null}
+            />
+          ))}
       </div>
     </div>
   )

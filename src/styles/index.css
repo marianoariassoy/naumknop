@@ -63,3 +63,15 @@ body {
 .indicators li {
   margin: 0 0.3rem !important;
 }
+
+.fade-in {
+  animation: fade-in 0.3s ease-in-out;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
