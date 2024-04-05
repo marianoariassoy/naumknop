@@ -19,7 +19,7 @@ const Index = () => {
         <div className='animate-fade animate-duration-300 m-auto max-w-6xl px-6 py-20 flex flex-col-reverse lg:flex-row gap-y-6 gap-x-12'>
           <div className='lg:w-1/3'>
             <ImageComponent
-              src='https://marianoarias.soy/sites/knop-backend/images-static/fundacion.jpg'
+              src='http://naum-knop.org/backend/images-static/fundacion.jpg'
               alt='Imagen para historia'
             />
           </div>

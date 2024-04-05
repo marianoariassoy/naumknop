@@ -1,26 +1,19 @@
 import EventosItem from './EventosItem'
+import useFetch from '../../hooks/useFetch'
+import Loader from '../../components/Loader'
 
 const Lugares = () => {
-  const data = [
-    {
-      title: 'PATIO',
-      text: '',
-      image: 'https://marianoarias.soy/sites/knop-backend/images-static/patio.jpg'
-    },
-    {
-      title: 'SALA AUDITORIO',
-      text: 'Capacidad: 50 personas\nAire acondicionado\nIluminación dicroica',
-      image: 'https://marianoarias.soy/sites/knop-backend/images-static/sala-auditorio.jpg'
-    },
-    {
-      title: 'SALA DE EXPOSICIÓN',
-      text: '',
-      image: 'https://marianoarias.soy/sites/knop-backend/images-static/sala-exposicion.jpg'
-    }
-  ]
+  const { data, loading } = useFetch(`/eventos`)
+
+  if (loading)
+    return (
+      <div className='w-full mt-12'>
+        <Loader />
+      </div>
+    )
 
   return (
-    <div className='m-auto max-w-6xl px-6 pb-12 pt-12 grid lg:grid-cols-3 gap-3'>
+    <div className='fade-in m-auto max-w-6xl px-6 pb-12 pt-12 grid lg:grid-cols-3 gap-3'>
       {data.map((item, index) => (
         <EventosItem
           data={item}

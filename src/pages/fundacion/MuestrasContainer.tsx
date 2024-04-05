@@ -31,8 +31,11 @@ const Index = () => {
       <Volver url='/fundacion/historia' />
 
       <section className='bg-secondary h-full'>
-        <div className='animate-fade animate-duration-300 m-auto max-w-6xl px-6 py-20 grid lg:grid-cols-3 gap-3 font-secondary'>
+        <div className='m-auto max-w-6xl px-6 pt-20 mb-10 font-secondary'>
           <MuestrasTexto />
+        </div>
+
+        <div className='animate-fade animate-duration-300 m-auto max-w-6xl px-6 pb-20 grid lg:grid-cols-3 gap-6  font-secondary'>
           {loading ? (
             <Loader />
           ) : (
