@@ -1,10 +1,11 @@
 import Layout from '../../layout/Layout'
+import ExposicionesItem from './ExposicionesItem'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
-import HTMLText from '../../hooks/useHTML'
 import Volver from '../../components/Volver'
+
 const Index = () => {
-  const { data, loading } = useFetch(`/textos`)
+  const { data, loading } = useFetch(`/bibliografia`)
 
   return (
     <Layout>
@@ -14,10 +15,20 @@ const Index = () => {
         {loading ? (
           <Loader />
         ) : (
-          <div className='animate-fade animate-duration-300 m-auto max-w-6xl px-6 py-20'>
-            <div className='flex flex-col lg:flex-row gap-x-12'>
-              <div className='lg:w-1/3'></div>
-              <div className='lg:w-2/3'>{<HTMLText text={data[5].text} />}</div>
+          <div className='animate-fade animate-duration-300 m-auto max-w-6xl px-6 py-20 flex flex-col gap-y-6'>
+            <div className='flex gap-x-6 lg:gap-x-12'>
+              <div className='w-[15%] lg:w-1/3'></div>
+              <div className='w-[85%] lg:w-2/3'>
+                <h1 className='text-xl font-black'>Bibliografía</h1>
+              </div>
+            </div>
+            <div className='flex flex-col gap-y-2'>
+              {data.map((item, index) => (
+                <ExposicionesItem
+                  key={index}
+                  data={item}
+                />
+              ))}
             </div>
           </div>
         )}

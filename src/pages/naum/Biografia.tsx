@@ -17,13 +17,11 @@ const Index = () => {
     <Layout>
       <section className='bg-secondary h-full'>
         <div className='animate-fade animate-duration-300 m-auto max-w-6xl px-6 py-20 flex flex-col-reverse lg:flex-row gap-y-6 gap-x-12'>
-          <div className='lg:w-1/3'></div>
+          <div className='lg:w-1/3'>
+            <BiografiaImages />
+          </div>
           <div className='lg:w-2/3 flex flex-col gap-y-6'>
-            <div className='font-secondary [&>div>b]:font-black [&>div>b]:text-[#00a19a]'>{loading ? <BeatLoader /> : <HTMLText text={data[7].text} />}</div>
-
-            <div className='grid lg:grid-cols-2 gap-6'>
-              <BiografiaImages />
-            </div>
+            <div className='font-secondary [&>div>b]:font-black [&>div>b]:text-[#00a19a]'>{loading ? <BeatLoader /> : <HTMLText text={data[6].text} />}</div>
           </div>
         </div>
       </section>

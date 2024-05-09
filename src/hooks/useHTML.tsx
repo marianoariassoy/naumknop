@@ -1,7 +1,7 @@
 const useHTML = ({ text }) => {
   return (
     <div
-      className='animate-fade animate-duration-300 text-balance'
+      className='leading-7'
       dangerouslySetInnerHTML={{ __html: text }}
     />
   )

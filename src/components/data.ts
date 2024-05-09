@@ -53,21 +53,21 @@ export const menu = [
       },
       {
         title: 'Muestras',
-        url: '/fundacion/muestras',
-        filters: [
-          {
-            title: '2023',
-            url: '/fundacion/muestras/2023'
-          },
-          {
-            title: '2022',
-            url: '/fundacion/muestras/2022'
-          },
-          {
-            title: '2019',
-            url: '/fundacion/muestras/2019'
-          }
-        ]
+        url: '/fundacion/muestras'
+        // filters: [
+        //   {
+        //     title: '2023',
+        //     url: '/fundacion/muestras/2023'
+        //   },
+        //   {
+        //     title: '2022',
+        //     url: '/fundacion/muestras/2022'
+        //   },
+        //   {
+        //     title: '2019',
+        //     url: '/fundacion/muestras/2019'
+        //   }
+        // ]
       },
       {
         title: 'Nosotros',

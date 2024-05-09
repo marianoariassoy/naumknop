@@ -9,11 +9,11 @@
   --color-secondary: #f4f1e8;
   --color-gray: #878787;
   --color-gray-2: #bbb9b3;
-  --font-size: 16px;
 }
 body {
-  color: #1d1d1b;
+  color: #000;
   accent-color: var(--color-primary);
+  font-size: 17px;
 }
 .font-secondary {
   font-family: 'Alegreya', serif;

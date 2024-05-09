@@ -30,7 +30,7 @@ const FormContacto = () => {
       subject: 'Contacto'
     }
 
-    axios.post('http://naum-knop.org/backend/send-email.php', { ...data, ...sender }).then(data => {
+    axios.post('https://naum-knop.org/backend/send-email.php', { ...data, ...sender }).then(data => {
       if (data.data === 'success') {
         setSended(true)
         setSending(false)

@@ -16,11 +16,10 @@ const Index = () => {
     <Layout>
       <section className='bg-secondary h-full'>
         <div className='animate-fade animate-duration-300 m-auto max-w-6xl px-6 pt-20 flex flex-col-reverse lg:flex-row gap-y-6 gap-x-12 font-secondary'>
-          <div className='lg:w-1/3'></div>
           {!loading && (
-            <div className='fade-in lg:w-2/3 flex flex-col gap-y-3'>
+            <div className='fade-in flex flex-col gap-y-3'>
               <div className='text-primary'>
-                <HTMLText text={data[6].text} />
+                <HTMLText text={data[5].text} />
               </div>
               <a
                 href='mailto:info@naum-knop.org'

@@ -13,6 +13,7 @@ import Nosotros from './pages/fundacion/Nosotros'
 
 import Prensa from './pages/prensa'
 import Eventos from './pages/eventos'
+import EventosDetalles from './pages/eventos/EventosDetalles'
 import Contacto from './pages/contacto'
 import Error from './pages/error'
 
@@ -85,6 +86,10 @@ function App() {
       <Route
         path='/eventos'
         component={Eventos}
+      />
+      <Route
+        path='/eventos/:id/:title'
+        component={EventosDetalles}
       />
       <Route
         path='/contacto'

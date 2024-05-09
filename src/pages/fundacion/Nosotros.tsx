@@ -22,9 +22,9 @@ const Index = () => {
           <div className='lg:w-1/3'></div>
           <div className='lg:w-2/3 font-secondary flex flex-col gap-y-3'>
             <h1 className='font-black text-xl'>Consejo de Administración</h1>
-            {loading ? <Loader /> : <HTMLText text={data[3].text} />}
+            {loading ? <Loader /> : <HTMLText text={data[2].text} />}
             <h1 className='font-black text-xl'>Staff</h1>
-            {loading ? <Loader /> : <HTMLText text={data[4].text} />}
+            {loading ? <Loader /> : <HTMLText text={data[3].text} />}
           </div>
         </div>
       </section>

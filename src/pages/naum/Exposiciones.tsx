@@ -26,8 +26,7 @@ const Index = () => {
               {data.map((item, index) => (
                 <ExposicionesItem
                   key={index}
-                  year={item.year}
-                  text={item.text}
+                  data={item}
                 />
               ))}
             </div>

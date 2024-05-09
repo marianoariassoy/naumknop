@@ -1,9 +1,9 @@
 import { useEffect } from 'react'
 import Layout from '../../layout/Layout'
-import ImageComponent from '../../components/Image'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 import HTMLText from '../../hooks/useHTML'
+import Slider from './Slider'
 
 const Index = () => {
   const { data, loading } = useFetch(`/textos`)
@@ -16,18 +16,15 @@ const Index = () => {
   return (
     <Layout>
       <section className='bg-secondary h-full'>
-        <div className='animate-fade animate-duration-300 m-auto max-w-6xl px-6 py-20 flex flex-col-reverse lg:flex-row gap-y-6 gap-x-12'>
-          <div className='lg:w-1/3'>
-            <ImageComponent
-              src='http://naum-knop.org/backend/images-static/fundacion.jpg'
-              alt='Imagen para historia'
-            />
+        <div className='animate-fade animate-duration-300 m-auto max-w-6xl px-6 py-20 flex flex-col gap-y-12'>
+          <div className='w-full bg-slate-300'>
+            <Slider />
           </div>
-          <div className='lg:w-2/3 font-secondary flex flex-col gap-y-3'>
+          <div className='font-secondary flex flex-col gap-y-3'>
             <h1 className='font-black text-xl'>La fundación</h1>
-            {loading ? <Loader /> : <HTMLText text={data[1].text} />}
+            {loading ? <Loader /> : <HTMLText text={data[0].text} />}
             <h1 className='font-black text-xl'>La casa museo</h1>
-            {loading ? <Loader /> : <HTMLText text={data[2].text} />}
+            {loading ? <Loader /> : <HTMLText text={data[1].text} />}
           </div>
         </div>
       </section>
